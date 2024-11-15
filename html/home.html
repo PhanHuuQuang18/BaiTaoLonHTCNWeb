@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../IMG/logo.png">
+    <link rel="stylesheet" href="../css/display.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/kiemtradangnhap.js"></script>
+    <script src="../js/Data.js"></script>
+    <title>Trang chủ</title>
+</head>
+<script>
+    let item
+</script>
+<style>
+    .navbar {
+        overflow: hidden;
+        background-color: #333;
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+    
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #2891f3;
+        z-index: 1;
+        list-style: none;
+    }
+    
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+</style>
+
+<body>
+    <!-- Header -->
+    <div>
+        <header>
+            <div class="col-md-12 header_backgroup">
+                <div class="col-md-6">
+                    <nav class="navbar-collapse">
+                        <div class="header_TenShop">
+                            <img src="../IMG/logo.jpg" alt="">
+                            <h1>Organic</h1>
+                        </div>
+                        <ul class="navbar-nav nav ">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../IMG/product.png" alt="">Sản Phẩm
+                                    <span class="caret"></span></a>
+                                <ul class="dropdown-menu ">
+                                    <li><a href="../html/Mybunmien.html">Mỳ bún miến</a></li>
+                                    <li><a href="../html/Nguyenphulieu.html">Nguyên phụ liệu</a></li>
+                                    <li><a href="../html/Ngucoc.html">Ngũ cốc</a></li>
+                                    <li><a href="../html/Snack.html">Snack</a></li>
+                                    <li><a href="../html/Hathuuco.html">Hạt hữu cơ</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="../html/GioiThieu.html"><img src="../IMG/introduct.png" alt="">Giới thiệu
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../html/Contact.html"><img src="../IMG/contact.png" alt="">Liên hệ</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-md-6 float-sm-right form-group">
+                    <nav style="float: right; margin-top: 20px;" class="navbar-collapse">
+                        <ul class="navbar-nav nav ">
+                            <li>
+                                <form class="form-inline float-sm-right">
+                                    <input class="form-control mr-sm-2" type="text" id="txtMasp" placeholder="Tìm kiếm" aria-label="Search">
+                                    <button class="btn btn-outline-success my-2 my-sm-0 timKiem" id="btnTim" type="submit">
+                                    </button><br>
+                                    <span class="text-danger font-italic" id="thongbao">*</span>
+                                </form>
+                            </li>
+                            <li>
+                                <a href="../html/DangKy.html" id="dn" style="margin-left: 5px;"><img src="../IMG/register.png" alt="">Đăng ký</a>
+                            </li>
+                            <li>
+                                <a href="#" id="btnLogIn"><img src="../IMG/login.png" alt="">Đăng nhập</a>
+                            </li>
+                            <li>
+                                <a href="../html/GioHang.html" id="btnShop"><img src="../IMG/shop.png" alt="">Giỏ hàng
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <div class="btn-group btn-group-justified" id="menu_sanpham">
+            <a href="../html/home.html" class="btn btn-block ">Trang chủ</a>
+            <a href="../html/Mybunmien.html" class="btn btn-block ">Mỳ bún miến</a>
+            <a href="../html/Nguyenphulieu.html" class="btn btn-block">Nguyên phụ liệu</a>
+            <a href="../html/Ngucoc.html" class="btn btn-block">Ngũ cốc</a>
+            <a href="../html/Snack.html" class="btn btn-block">Snack</a>
+            <a href="../html/Hathuuco.html" class="btn btn-block">Hạt hữu cơ</a>
+        </div>
+    </div>
+    <!-- Body -->
+    <div class="container-fluid quangCao">
+        <div id="carousel-simple" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-simple" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-simple" data-slide-to="1"></li>
+                <li data-target="#carousel-simple" data-slide-to="2"></li>
+                <li data-target="#carousel-simple" data-slide-to="3"></li>
+                <li data-target="#carousel-simple" data-slide-to="4"></li>
+            </ol>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner quangCaoimg" role="listbox">
+                <div class="item active">
+                    <img src="../IMG/giamGia50.jpg" alt="">
+                </div>
+                <div class="item">
+                    <img src="../IMG/supersale.jpg" alt="">
+                </div>
+                <div class="item">
+                    <img src="../IMG/poster.jpg" alt="">
+                </div>
+                <div class="item">
+                    <img src="../IMG/voucher2.png" alt="">
+                </div>
+                <div class="item">
+                    <img src="../IMG/depheader.jpg" alt="">
+                </div>
+            </div>
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-simple" role="button" data-slide="prev">
+                <i class="fa fa-chevron-left" aria-hidden="true"></i>
+            </a>
+            <a class="right carousel-control" href="#carousel-simple" role="button" data-slide="next">
+                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+            </a>
+        </div>
+    </div>
+    <hr class="homehr" />
+    <!-- Sản phẩm bán chạy-->
+    <div class="container">
+        <h2>SẢN PHẨM ĐANG HOT:</h2>
+        <div class="row">
+            <div class='col-md-3 border div_SanPham'>
+                <figure>
+                    <a href='../html/chitietHathuuco.html'><img src="../IMG/hatdaunanhhuuco.jpg" alt='' width='100%'></a>
+                    <h5>Hạt đậu nành hữu cơ</h5>
+                    <h2>125,000đ</h2>
+                </figure>
+            </div>
+            <div class='col-md-3 border div_SanPham'>
+                <figure>
+                    <a href='../html/chitietSnack.html'><img src="../IMG/banhgaohuuco.jpg" alt='' width='100%'></a>
+                    <h5>Bánh gạo hữu cơ </h5>
+                    <h2>43,000đ</h2>
+                </figure>
+            </div>
+            <div class='col-md-3 border div_SanPham'>
+                <figure>
+                    <a href='../html/chitietHathuuco.html'><img src="../IMG/daudohuuco.jpg" alt='' width='100%'></a>
+                    <h5>Đậu đỏ hữu cơ</h5>
+                    <h2>86,000đ</h2>
+                </figure>
+            </div>
+            <div class='col-md-3 border div_SanPham'>
+                <figure>
+                    <a href='../html/chitietNguyenphulieu.html'><img src="../IMG/N1.JPG" alt='' width='100%'></a>
+                    <h5>panking soda</h5>
+                    <h2>90,000đ</h2>
+                </figure>
+            </div>
+            <div class='col-md-3 border div_SanPham'>
+                <figure>
+                    <a href='../html/Ngucoc.html'><img src="../IMG/h_ngu_coc_thanh_annie_s_organic_chewy_ganola_bars__chocolate_chip_151g_6191539d523e4d1e9e152cc629c32b3e_large.webp" alt='' width='100%'></a>
+                    <h5>Ngũ cốc thành annie</h5>
+                    <h2>65,000đ</h2>
+                </figure>
+            </div>
+            <div class='col-md-3 border div_SanPham'>
+                <figure>
+                    <a href='../html/chitietSnack.html'><img src="../IMG/banhgaolutjetmine.jpg" alt='' width='100%'></a>
+                    <h5>Bánh gạo lứt jetmine</h5>
+                    <h2>97,000đ</h2>
+                </figure>
+            </div>
+            <div class='col-md-3 border div_SanPham'>
+                <figure>
+                    <a href='../html/chitietHathuuco.html'><img src="../IMG/daudokicny.jpg" alt='' width='100%'></a>
+                    <h5>Đậu đỏ kicny</h5>
+                    <h2>87,000đ</h2>
+                </figure>
+            </div>
+            <div class='col-md-3 border div_SanPham'>
+                <figure>
+                    <a href='../html/chitietHathuuco.html'><img src="../IMG/daugahuuco.jpg" alt='' width='100%'></a>
+                    <h5>Đậu gà hữu cơ</h5>
+                    <h2>39,000đ</h2>
+                </figure>
+            </div>
+        </div>
+        <hr class="homehr">
+        <!-- sản phẩm PC -->
+        <div class="container">
+            <h2>Mỳ bún miến:</h2>
+            <div class="row">
+                <div class='col-md-3 border div_SanPham'>
+                    <figure>
+                        <a href='../html/chitietMybunmien.html'><img src="../IMG/banh_hoi_huu_co.jpg" alt='' width='100%'></a>
+                        <h5>Bánh hỏi hữu cơ</h5>
+                        <h2>50,000đ</h2>
+                    </figure>
+                </div>
+                <div class='col-md-3 border div_SanPham'>
+                    <figure>
+                        <a href='../html/chitietMybunmien.html'><img src="../IMG/bun_gao_huu_co.jpg" alt='' width='100%'></a>
+                        <h5>Bún gạo hữu cơ</h5>
+                        <h2>90,000đ</h2>
+                    </figure>
+                </div>
+                <div class='col-md-3 border div_SanPham'>
+                    <figure>
+                        <a href='../html/chitietMybunmien.html'><img src="../IMG/bun_gao_lut_hoa_sua.jpg" alt='' width='100%'></a>
+                        <h5>Bún gạo lứt hoa sữa</h5>
+                        <h2>60,000đ</h2>
+                    </figure>
+                </div>
+                <div class='col-md-3 border div_SanPham'>
+                    <figure>
+                        <a href='../html/chitietMybunmien.html'><img src="../IMG/bun_gao_lut_huu_co.jpg" alt='' width='100%'></a>
+                        <h5>Bún gạo lứt hữu cơ</h5>
+                        <h2>75,000đ</h2>
+                    </figure>
+                </div>
+            </div>
+            <br>
+            <a href="../html/Mybunmien.html"><button type="submit" class="btn btn-success">Xem them
+                    &#155;&#155;</button></a>
+        </div>
+        <hr class="homehr">
+        <div class="container">
+            <h2>Nguyên phụ liệu:</h2>
+            <div class="row">
+                <div class='col-md-3 border div_SanPham'>
+                    <figure>
+                        <a href='../html/chitietNguyenphulieu.html'><img src="../IMG/N2.jpg" alt='' width='100%'></a>
+                        <h5>Bắp ngô hạt hữu cơ</h5>
+                        <h2>50,000đ</h2>
+                    </figure>
+                </div>
+                <div class='col-md-3 border div_SanPham'>
+                    <figure>
+                        <a href='../html/chitietNguyenphulieu.html'><img src="../IMG/n3.jpg" alt='' width='100%'></a>
+                        <h5>Bột bắp hữu cơ marka</h5>
+                        <h2>100,000đ</h2>
+                    </figure>
+                </div>
+                <div class='col-md-3 border div_SanPham'>
+                    <figure>
+                        <a href='../html/chitietNguyenphulieu.html'><img src="../IMG/n4.jpg" alt='' width='100%'></a>
+                        <h5>Bột bắp hữu cơ probios</h5>
+                        <h2>45,000đ</h2>
+                    </figure>
+                </div>
+                <div class='col-md-3 border div_SanPham'>
+                    <figure>
+                        <a href='../html/chitietNguyenphulieu.html'><img src="../IMG/n5.jpg" alt='' width='100%'></a>
+                        <h5>Bột chiên xù hữu cơ probios</h5>
+                        <h2>75,000đ</h2>
+                    </figure>
+                </div>
+            </div>
+            <br>
+            <a href="../html/Nguyenphulieu.html"><button type="submit" class="btn btn-success">Xem them
+                    &#155;&#155;</button></a>
+        </div>
+        <hr class="homehr">
+        <div class="container">
+            <h2>Ngũ cốc:</h2>
+            <div class="row">
+                <div class='col-md-3 border div_SanPham'>
+                    <figure>
+                        <a href='../html/chitietNgucoc.html'><img src="../IMG/ngucocthanhanie.jpg" alt='' width='100%'></a>
+                        <h5>Bánh ngũ cốc thanh anie</h5>
+                        <h2>186,000đ</h2>
+                    </figure>
+                </div>
+                <div class='col-md-3 border div_SanPham'>
+                    <figure>
+                        <a href='../html/chitietNgucoc.html'><img src="../IMG/ngucocthanhtim.jpg" alt='' width='100%'></a>
+                        <h5>Ngũ cốc thanh anie tím</h5>
+                        <h2>186,000đ</h2>
+                    </figure>
+                </div>
+                <div class='col-md-3 border div_SanPham'>
+                    <figure>
+                        <a href='../html/chitietNgucoc.html'><img src="../IMG/hatdaunanhhuuco.jpg" alt='' width='100%'></a>
+                        <h5>Htạ đậu nành hữu cơ</h5>
+                        <h2>65,000đ</h2>
+                    </figure>
+                </div>
+                <div class='col-md-3 border div_SanPham'>
+                    <figure>
+                        <a href='../html/chitietNgucoc.html'><img src="../IMG/hatdiemmachtranghuuco.jpg" alt='' width='100%'></a>
+                        <h5>Hạt diêm mạch trắng hữu cơ</h5>
+                        <h2>189,000đ</h2>
+                    </figure>
+                </div>
+            </div>
+            <br>
+            <a href="../html/chitietNgucoc.html"><button type="submit" class="btn btn-success">Xem them
+                    &#155;&#155;</button></a>
+        </div>
+        <hr class="homehr">
+        <div class="container">
+            <h2>Snack:</h2>
+            <div class="row">
+                <div class='col-md-3 border div_SanPham'>
+                    <figure>
+                        <a href='../html/chitietSnack.html'><img src="../IMG/banhgaohuuco.jpg" alt='' width='100%'></a>
+                        <h5>Bánh gạo hữu cơ</h5>
+                        <h2>28,000đ</h2>
+                    </figure>
+                </div>
+                <div class='col-md-3 border div_SanPham'>
+                    <figure>
+                        <a href='../html/chitietSnack.html'><img src="../IMG/banhgaolutjetmine.jpg" alt='' width='100%'></a>
+                        <h5>Bánh gạo lwuts jeutmine</h5>
+                        <h2>89,000đ</h2>
+                    </figure>
+                </div>
+                <div class='col-md-3 border div_SanPham'>
+                    <figure>
+                        <a href='../html/chitietSnack.html'><img src="../IMG/banhgaoluttim.jpg" alt='' width='100%'></a>
+                        <h5>Bánh gạo lứt tím hữu cơ</h5>
+                        <h2>30,000đ</h2>
+                    </figure>
+                </div>
+                <div class='col-md-3 border div_SanPham'>
+                    <figure>
+                        <a href='../html/chitietSnack.html'><img src="../IMG/bapngohuuco.jpg" alt='' width='100%'></a>
+                        <h5>Bắp ngô hữu cơ</h5>
+                        <h2>45,000đ</h2>
+                    </figure>
+                </div>
+            </div>
+            <br>
+            <a href="../html/Snack.html"><button type="submit" class="btn btn-success">Xem them
+                    &#155;&#155;</button></a>
+        </div>
+        <hr class="homehr">
+        <div class="container">
+            <h2>Hạt hữu cơ:</h2>
+            <div class="row">
+                <div class='col-md-3 border div_SanPham'>
+                    <figure>
+                        <a href='../html/chitietHathuuco.html'><img src="../IMG/daudenhuuco.jpg" alt='' width='100%'></a>
+                        <h5>Đậu đen hữu cơ</h5>
+                        <h2>25,000đ</h2>
+                    </figure>
+                </div>
+                <div class='col-md-3 border div_SanPham'>
+                    <figure>
+                        <a href='../html/chitietHathuuco.html'><img src="../IMG/daudoazukihuuco.jpg" alt='' width='100%'></a>
+                        <h5>Đậu đỏ azuki hữu cơ</h5>
+                        <h2>50,000đ</h2>
+                    </figure>
+                </div>
+                <div class='col-md-3 border div_SanPham'>
+                    <figure>
+                        <a href='../html/chitietHathuuco.html'><img src="../IMG/daudohuuco.jpg" alt='' width='100%'></a>
+                        <h5>Đậu đỏ hữu cơ</h5>
+                        <h2>99,000đ</h2>
+                    </figure>
+                </div>
+                <div class='col-md-3 border div_SanPham'>
+                    <figure>
+                        <a href='../html/chitietHathuuco.html'><img src="../IMG/daugahuuco.jpg" alt='' width='100%'></a>
+                        <h5>Đậu gà hữu cơ</h5>
+                        <h2>81,000đ</h2>
+                    </figure>
+                </div>
+            </div>
+            <br>
+            <a href="../html/Hathuuco.html"><button type="submit" class="btn btn-success">Xem them &#155;&#155;</button></a>
+        </div>
+    </div>
+    <br><br>
+    <!-- Footer -->
+    <footer class="container-fluid footer" style="background-color: 47e7a4;">
+        <div class="col-md-6">
+            <b>
+                <div class="list-icon footer_icon">
+                    <i class="fa fa-facebook-official"></i>
+                    <i class="fa fa-instagram"></i>
+                    <i class="fa fa-google"></i>
+                    <i class="fa fa-twitter"></i>
+                </div>
+                <h3>VỀ CHÚNG TÔI</h3>
+                <p>Cửa hàng thực phẩm khô Organic</p>
+                <p>Hotline: 035.000.0000</p>
+                <p>Email: phanhuuquang18072003@gmail.com</p>
+                <p>Địa chỉ: 12 Nguyễn Văn Bảo - Phường 4 - Quận Gò Vấp - TP.HCM</p>
+
+                <p>Copyright 2022 © Thiết kế Website </p>
+                <br>
+            </b>
+        </div>
+    </footer>
+    <div class="modal fade" id="logInModal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content modal_background">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 style="text-align: center;">Đăng nhập</h4>
+                </div>
+                <div class="modal-body">
+                    <form role="form" class="form-horizontal">
+                        <div class="form-group">
+                            <div id="thongbao" class="text-danger" style="text-align: center;"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtUserName" class="control-label col-xs-3">Tên đăng nhập</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" id="txtUserName" placeholder="Tên đăng nhập">
+                                <span id="tbUserName" class="text-danger">*</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtPass" class="control-label col-xs-3">Mật khẩu</label>
+                            <div class="col-md-9">
+                                <input type="password" class="form-control" id="txtPass" placeholder="Mật khẩu">
+                                <span id="tbPass" class="text-danger">*</span>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-success btn-lg btn-block">Đăng nhập </button>
+                    </form>
+                    <div class="modal-footer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

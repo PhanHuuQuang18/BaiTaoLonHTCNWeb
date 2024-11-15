@@ -1,0 +1,142 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header_TenShop{
+    width: 250px;
+    margin-top: 20px;
+    width: 100%;
+}
+.header_TenShop img{
+    width: 100px;
+    float: left;
+}
+.header_TenShop h1{
+    padding-top: 20px;
+    color: coral;
+    float: left;
+    font-size: 60px;
+    text-shadow: 3px 3px 6px #28728f,-3px -3px 6px #d8439a;
+    font-family: sans-serif;
+}
+.header_backgroup{
+    background-color: #47e7a4;
+    padding-bottom: 20px;
+}
+.header_backgroup a{
+    color: black;
+}
+.header_backgroup ul{
+    padding-top: 20px;
+    margin: 10px;
+    float: right;
+}
+.header_backgroup input{
+    border: #469e79;
+}
+.timKiem{
+    background-image: url(../IMG/button_TimKiem.jpg);
+    background-size:auto 100% ;
+    width: 33px;
+    height: 32px;
+    /* border: 1px solid #469e79; */
+}
+#menu_sanpham{
+    background-color: #7c1c0f;
+    float: right;
+}
+#menu_sanpham a{
+    color: #ffff; 
+    font-size: 20px;
+}
+#menu_sanpham a:hover{
+    color: #4ee67c; 
+}
+/* Modal dang nhap */
+.modal_background{
+    background-color: #3d628dd2;
+    color: white;
+}
+.modal_background button{
+    background-color: #469e79;
+}
+
+
+/* Trang chi tiet dat hang */
+.anhDatHang{
+   height: 100%;
+   float: left;
+   width: 500px;
+}
+.anhDatHang img{
+    margin: 20px;
+    width: 400px;
+    margin-top: 60px;
+}
+.thongTinDatHang{
+    width: 600px;
+    margin-left: 20px;
+}
+.footer{
+    width: 100%;
+    background-color:#47e7a4;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    font-size: 18px;
+}
+.footer_icon{
+    width: 50px;
+    display: block;
+    position: absolute;
+    right: -100%;
+    margin-top: 50px;
+    font-size: 30px;
+}
+
+/* Trang gioi thieu */
+.div_GioiThieu{
+    padding-top: 220px;
+    padding-bottom: 50px;
+    font-size: 17px; 
+    font-family: Console;
+    background-color: azure;
+}
+
+/* Gởi phản hồi cho shop và đăng ký */
+.div_Contact{
+    padding-top: 50px;
+}
+.div_GoiTin{
+    margin-bottom: 30px;
+}
+
+/* San pham */
+.div_SanPham{
+    /* height: 380px; */
+    margin-top: 10px;
+    text-align: left;
+    color: black;
+}
+.div_SanPham img{
+    width: 100%;
+}
+.div_SanPham h2{
+    color: red;
+    font-family: 'Times New Roman', Times, serif;
+}
+.div_SanPham:hover{
+    /* background-color: #28728f; */
+    box-shadow:0px 0px 5px #28728f;
+}
+.quangCao{
+    float: left;
+    width: 100%;
+}
+.quangCao i{
+    margin-top: 150px;
+}
+
+.homehr{
+    border: 0.1px solid #f3c999;
+}

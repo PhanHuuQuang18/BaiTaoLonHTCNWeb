@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hạt hữu cơ</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="../IMG/logo.png">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/display.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/kiemtradangnhap.js"></script>
+    <!-- <script src="../js/Data.js"></script> -->
+    <script>
+        let dssp = JSON.parse(localStorage.getItem("products_Hathuuco"))
+
+        function setMasp(masp) {
+            localStorage.setItem("masp", masp)
+        }
+
+        function napDSSP(dssp) {
+            dssp.forEach(sp => {
+                let item = "<div class='col-md-3 border div_SanPham'>" +
+                    "<figure>" +
+                    "<a onclick='setMasp(" + sp.masp + ")'href='chitietHathuuco.html'><img src='" + sp.hinhanh + "' alt='' width='100%' ></a>" +
+                    "<h5 >" + sp.tensp + "</h5>" +
+                    "<h2>" + sp.dongia + "đ</h2>"
+                "</figure>" +
+                "</div>"
+                $("#myRow").append(item)
+            });
+        }
+        $(document).ready(function() {
+            napDSSP(dssp)
+        })
+    </script>
+
+</head>
+
+<body>
+    <!-- Header -->
+    <div>
+        <header>
+            <div class="col-md-12 header_backgroup">
+                <div class="col-md-6">
+                    <nav class="navbar-collapse">
+                        <div class="header_TenShop">
+                            <img src="../IMG/logo.jpg" alt="">
+                            <h1>Organic</h1>
+                        </div>
+                        <ul class="navbar-nav nav ">
+                            <li>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><img src="../IMG/product.png" alt="">Sản Phẩm
+                                    <span class="caret"></span></a>
+                                <ul class="dropdown-menu ">
+                                    <li><a href="../html/Mybunmien.html">Mỳ bún miến</a></li>
+                                    <li><a href="../html/Nguyenphulieu.html">Nguyên phụ liệu</a></li>
+                                    <li><a href="../html/Ngucoc.html">Ngũ cốc</a></li>
+                                    <li><a href="../html/Snack.html">Snack</a></li>
+                                    <li><a href="../html/Hathuuco.html">Hạt hữu cơ</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="../html/GioiThieu.html"><img src="../IMG/introduct.png" alt="">Giới thiệu
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../html/Contact.html"><img src="../IMG/contact.png" alt="">Liên hệ</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-md-6 float-sm-right form-group">
+                    <nav style="float: right; margin-top: 20px;" class="navbar-collapse">
+                        <ul class="navbar-nav nav ">
+                            <li>
+                                <form class="form-inline float-sm-right">
+                                    <input class="form-control mr-sm-2" type="text" id="txtMasp" placeholder="Tìm kiếm" aria-label="Search">
+                                    <button class="btn btn-outline-success my-2 my-sm-0 timKiem" id="btnTim" type="submit">
+                                    </button><br>
+                                    <span class="text-danger font-italic" id="thongbao">*</span>
+                                </form>
+                            </li>
+                            <li>
+                                <a href="../html/DangKy.html" id="dn" style="margin-left: 5px;"><img src="../IMG/register.png" alt="">Đăng ký</a>
+                            </li>
+                            <li>
+                                <a href="#" id="btnLogIn"><img src="../IMG/login.png" alt="">Đăng nhập</a>
+                            </li>
+                            <li>
+                                <a href="../html/GioHang.html" id="btnShop"><img src="../IMG/shop.png" alt="">Giỏ hàng
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <div class="btn-group btn-group-justified" id="menu_sanpham">
+            <a href="../html/home.html" class="btn btn-block ">Trang chủ</a>
+            <a href="../html/Mybunmien.html" class="btn btn-block ">Mỳ bún miến</a>
+            <a href="../html/Nguyenphulieu.html" class="btn btn-block">Nguyên phụ liệu</a>
+            <a href="../html/Ngucoc.html" class="btn btn-block">Ngũ cốc</a>
+            <a href="../html/Snack.html" class="btn btn-block">Snack</a>
+            <a href="../html/Hathuuco.html" class="btn btn-block">Hạt hữu cơ</a>
+        </div>
+    </div>
+    <!-- Body -->
+    <div class="container">
+        <br><br>
+        <h2>Hạt hữu cơ:</h2>
+        <div class="row" id="myRow">
+        </div>
+        <br>
+    </div>
+
+    <br><br>
+    <!-- Footer -->
+    <footer class="container-fluid footer">
+        <div class="col-md-6">
+            <b>
+                <div class="list-icon footer_icon">
+                    <i class="fa fa-facebook-official"></i>
+                    <i class="fa fa-instagram"></i>
+                    <i class="fa fa-google"></i>
+                    <i class="fa fa-twitter"></i>
+                </div>
+                <h3>VỀ CHÚNG TÔI</h3>
+                <p>Cửa hàng thực phẩm khô Organic</p>
+                <p>Hotline: 035.000.0000</p>
+                <p>Email: phanhuuquang18072003@gmail.com</p>
+                <p>Địa chỉ: 12 Nguyễn Văn Bảo - Phường 4 - Quận Gò Vấp - TP.HCM</p>
+
+                <p>Copyright 2022 © Thiết kế Website </p>
+                <br>
+            </b>
+        </div>
+    </footer>
+    <div class="modal fade" id="logInModal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content modal_background">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 style="text-align: center;">Đăng nhập</h4>
+                </div>
+                <div class="modal-body">
+                    <form role="form" class="form-horizontal">
+                        <div class="form-group">
+                            <div id="thongbao" class="text-danger" style="text-align: center;"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtUserName" class="control-label col-xs-3">Tên đăng nhập</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" id="txtUserName" placeholder="Tên đăng nhập">
+                                <span id="tbUserName" class="text-danger">*</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtPass" class="control-label col-xs-3">Mật khẩu</label>
+                            <div class="col-md-9">
+                                <input type="password" class="form-control" id="txtPass" placeholder="Mật khẩu">
+                                <span id="tbPass" class="text-danger">*</span>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-success btn-lg btn-block">Đăng nhập </button>
+                    </form>
+                    <div class="modal-footer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
